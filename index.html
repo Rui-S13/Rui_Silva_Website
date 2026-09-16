@@ -12,13 +12,13 @@
     <header>
         <h1 class="titulo_header">Rui Silva</h1>
         <nav class="navegacao">
-            <a class="botao botao_about" href="index.html">About me</a>
-            <a class="botao botao_experiencia" href="experience.html">Experiência</a>
-            <a class="botao botao_interesses" href="interests.html">Interesses</a>
-            <a class="botao botao_contactos">Contactos</a>
+            <a class="botao botao_about" href="#about">About me</a>
+            <a class="botao botao_experiencia" href="#experiencia">Experiência</a>
+            <a class="botao botao_interesses" href="#interesses">Interesses</a>
+            <a class="botao botao_contactos" href="#contactos">Contactos</a>
         </nav>
     </header>
-    <section class="about">
+    <section id="about" class="about">
         <h2 class="titulo_corpo">About me</h2>
         <div class="texto_about">
             <p>
@@ -48,23 +48,23 @@
                 <p>Formação em ServiceNow</p>
             </div>
             <div class="atualmente_ponto">
-                <h3 class="atualmente_subtitulo">Cadeira:</h3>
-                <p>Formação em ServiceNow</p>
+                <h3 class="atualmente_subtitulo">A Aprender:</h3>
+                <p>Programação em JavaScript</p>
             </div>
         </div>
-        <div class="skills">
-            <p class="linguagem">HTML</p>
-            <p class="linguagem">CSS</p>
-            <p class="linguagem">JavaScript</p>
-            <p class="linguagem">SQL</p>
-            <p class="linguagem">ServiceNow</p>
-        </div>
+        <ul class="skills">
+            <li class="linguagem">HTML</li>
+            <li class="linguagem">CSS</li>
+            <li class="linguagem">JavaScript</li>
+            <li class="linguagem">SQL</li>
+            <li class="linguagem">ServiceNow</li>
+        </ul>
     </section>
-    <section class="experiencia">
+    <section id="experiencia" class="experiencia">
         <h2 class="titulo_corpo">Experiência</h2>
         <div class="experiencia_ponto">
             <p class="intervalo_tempo">2025-2026</p>
-            <p class="titulo_experiencia">Estágio Profissional – Técnico de Qualidade e Segurança Alimentar</p>
+            <p class="titulo_experiencia">Estágio Profissional - Técnico de Qualidade e Segurança Alimentar</p>
             <p class="descricao_experiencia"></p>
         </div>
         <div class="experiencia_ponto">
@@ -78,54 +78,66 @@
             <p class="descricao_experiencia"></p>
         </div>
     </section>
-    <section class="interesses">
+    <section id="interesses" class="interesses">
         <h2 class="titulo_corpo">Interesses</h2>
         <div class="leitura_atual">
             <h3 class="subtitulo">Leitura atual</h3>
-            <div class="capa_livro">
+            <figure class="capa_livro">
                 <img src="images/kafka-on-the-shore-1.jpg" alt="Kafka On The Shore">
-            </div>
-            <h4 class="titulo_livro_atual">Kafka On The Shore</h4>
+            </figure>
             <div class="percentagem_leitura">
                 <label for="leitura">Kafka on the Shore</label>
                 <progress id="leitura" value="65" max="100">65%</progress>
             </div>
         </div>
         <div class="livros_favoritos">
-            <h1>Livros Favoritos</h1>
-            <div class="lista_livros">
-                <div class="livro">
-                    <img src="" alt="">
-                    <p class="titulo_livro"></p>
-                </div>
-                <div class="livro">
-                    <img src="" alt="">
-                    <p class="titulo_livro"></p>
-                </div>
-                <div class="livro">
-                    <img src="" alt="">
-                    <p class="titulo_livro"></p>
-                </div>
-            </div>
+            <h3 class="subtitulo">Livros Favoritos</h3>
+            <ul class="lista_livros">
+                <li class="livro">
+                    <figure>
+                        <img src="images/flowers-for-algernon.jpg" alt='Capa de "Flores Para Algernon"'>
+                        <figcaption class="titulo_livro">Flores Para Algernon</figcaption>
+                    </figure>
+                </li>
+                <li class="livro">
+                    <figure>
+                        <img src="images/the-color-purple.jpg" alt='Capa de "A Cor Púrpura"'>
+                        <figcaption class="titulo_livro">A Cor Púrpura</figcaption>
+                    </figure>
+                </li>
+                <li class="livro">
+                    <figure>
+                        <img src="images/kim-jiyoung.jpg" alt='Capa de "Kim Jiyoung, Nascida 1982"'>
+                        <figcaption class="titulo_livro">Kim Jiyoung, Nascida 1982</figcaption>
+                    </figure>
+                </li>
+            </ul>
         </div>
         <div class="filmes_favoritos">
-            <div class="lista_filmes">
-                <div class="filme">
-                    <img src="" alt="">
-                    <p class="titulo_filme"></p>
-                </div>
-                <div class="filme">
-                    <img src="" alt="">
-                    <p class="titulo_filme"></p>
-                </div>
-                <div class="filme">
-                    <img src="" alt="">
-                    <p class="titulo_filme"></p>
-                </div>
-            </div>
+            <h3 class="subtitulo">Filmes Favoritos</h3>
+            <ul class="lista_filmes">
+                <li class="filme">
+                    <figure>
+                        <img src="" alt="">
+                        <figcaption class="titulo_filme"></figcaption>
+                    </figure>
+                </li>
+                <li class="filme">
+                    <figure>
+                        <img src="" alt="">
+                        <figcaption class="titulo_filme"></figcaption>
+                    </figure>
+                </li>
+                <li class="filme">
+                    <figure>
+                        <img src="" alt="">
+                        <figcaption class="titulo_filme"></figcaption>
+                    </figure>
+                </li>
+            </ul>
         </div>
     </section>
-    <section class="contactos_lista">
+    <section id="contactos" class="contactos_lista">
         <div class="contacto">
             <a href="">
                 <img src="images/linkedin-icon.jpg" alt="Ícone LinkedIn">
