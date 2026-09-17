@@ -148,7 +148,7 @@ header {
     flex: 1;
     min-width: 0;
     overflow-wrap: break-word;
-    padding: 64px 20%;
+    padding: 64px 17%;
 
     display: flex;
     flex-direction: column;
@@ -364,4 +364,9 @@ footer {
     grid-area: footer;
     color: var(--cor-fundo);
     background-color: var(--cor-texto);
+}
+
+::selection {
+    background-color: var(--cor-principial);
+    color: white;
 }
