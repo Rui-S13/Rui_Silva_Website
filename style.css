@@ -29,6 +29,11 @@
     --curva-caixa: 12px;
 }
 
+::selection {
+    background-color: var(--cor-principial);
+    color: white;
+}
+
 body {
     display: grid;
     grid-template-columns: 400px auto;
@@ -183,6 +188,11 @@ header {
 
 /*============================ABOUT ME============================*/
 
+/*---------------TEXTO---------------*/
+.texto_about p{
+    margin-bottom: 16px;
+}
+
 /*---------------ATUALMENTE---------------*/
 
 .atualmente_lista {
@@ -233,7 +243,7 @@ header {
 }
 
 .linguagem {
-    list-style-type: none;    
+    list-style-type: none;
 
     background-color: var(--cor-branco);
 
@@ -363,7 +373,7 @@ header {
     display: none;
 }
 
-.favoritos_container{
+.favoritos_container {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -390,13 +400,13 @@ header {
     display: none;
 }
 
-#livros:checked + label,
-#filmes:checked + label {
+#livros:checked+label,
+#filmes:checked+label {
     background-color: var(--cor-destaque);
 }
 
 .favoritos:has(#livros:checked) .lista_livros {
-    list-style-type: none;    
+    list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -431,33 +441,76 @@ header {
 }
 
 .titulo_livro {
-    margin-top: 8px;
     font-size: 0.95rem;
     font-weight: 700;
-    line-height: 1.2;
     text-align: center;
 }
 
 .autor_livro {
-    margin-top: 3px;
     font-size: 0.75rem;
     font-weight: 400;
     color: #555;
-    line-height: 1.2;
     text-align: center;
 }
 
 
+/*============================CONTACTO============================*/
+
+.contactos_container {
+    display: flex;
+    flex-direction: column;
+    width: clamp(400px, 70%, 1000px);
+    gap: 15px;
+}
+
+.contacto {
+    display: grid;
+    grid-template-columns: 25px 120px 1fr;
+    grid-template-areas:
+        "icon tipo informacao";
+    align-items: center;
+    column-gap: 15px;
+
+    padding: 15px;
+    height: 70px;
+    background-color: var(--cor-branco);
+    border: solid var(--cor-destaque) 0.3px;
+    border-radius: var(--curva-caixa);
+
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+.contacto_icon {
+    grid-area: icon;
+}
+
+.contacto_tipo {
+    grid-area: tipo;
+}
+
+.contacto_informacao {
+    grid-area: informacao;
+    justify-self: end;
+}
+
+.contacto:hover {
+    background-color: var(--cor-principial);
+    color: var(--cor-fundo);
+    fill: var(--cor-fundo);    
+}
+
+.contacto:active {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principial);
+    fill: var(--cor-principial)
+}
 
 
 
+/*============================FOOTER============================*/
 footer {
     grid-area: footer;
     color: var(--cor-fundo);
     background-color: var(--cor-texto);
-}
-
-::selection {
-    background-color: var(--cor-principial);
-    color: white;
 }
