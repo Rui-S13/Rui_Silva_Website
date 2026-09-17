@@ -233,18 +233,17 @@ header {
 }
 
 .linguagem {
-    padding: 5px 10px;
+    list-style-type: none;    
 
     background-color: var(--cor-branco);
 
+    padding: 5px 10px;
     border-style: solid;
     border-color: var(--cor-destaque);
     border-radius: var(--curva-caixa);
     border-width: 0.3px;
 
     font-weight: bold;
-
-    list-style-type: none;
 }
 
 
@@ -288,6 +287,8 @@ header {
 
 /*============================INTERESSES============================*/
 
+/*---------------LEITURA ATUAL---------------*/
+
 .leitura_atual_container {
     display: grid;
     grid-template-columns: 150px auto;
@@ -312,6 +313,7 @@ header {
 
 .capa_livro img {
     width: 100%;
+    height: auto;
 }
 
 .leitura_informacao {
@@ -354,6 +356,95 @@ header {
 
 .page_count {
     font-size: 0.8rem;
+}
+
+/*---------------FAVORITOS---------------*/
+.favoritos input[type="radio"] {
+    display: none;
+}
+
+.favoritos_container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.tab {
+    cursor: pointer;
+
+    background-color: var(--cor-branco);
+    padding: 5px 10px;
+    border-style: solid;
+    border-color: var(--cor-destaque);
+    border-radius: var(--curva-caixa);
+    border-width: 0.3px;
+}
+
+.lista_filmes {
+    display: none;
+}
+
+#livros:checked + label,
+#filmes:checked + label {
+    background-color: var(--cor-destaque);
+}
+
+.favoritos:has(#livros:checked) .lista_livros {
+    list-style-type: none;    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    padding: 25px;
+    background-color: var(--cor-branco);
+    border-style: solid;
+    border-color: var(--cor-destaque);
+    border-radius: var(--curva-caixa);
+    border-width: 0.3px;
+}
+
+.favoritos:has(#livros:checked) .lista_filmes {
+    display: none;
+}
+
+.favoritos:has(#filmes:checked) .lista_livros {
+    display: none;
+}
+
+.favoritos:has(#filmes:checked) .lista_filmes {
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.livro img {
+    width: 200px;
+}
+
+.titulo_livro {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.autor_livro {
+    margin-top: 3px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.2;
+    text-align: center;
 }
 
 
