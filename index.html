@@ -10,13 +10,22 @@
 
 <body>
     <header>
-        <h1 class="titulo_header">Rui Silva</h1>
+        <div class="titulo_header">
+            <p class="subtitulo_header">CV & Portfólio</p>
+            <h1 class="nome_header">Rui Silva</h1>
+            <p class="descricao_header">Estudante em reconversão e formação ServiceNow</p>
+        </div>
         <nav class="navegacao">
             <a class="botao botao_about" href="#about">About me</a>
             <a class="botao botao_experiencia" href="#experiencia">Experiência</a>
             <a class="botao botao_interesses" href="#interesses">Interesses</a>
             <a class="botao botao_contactos" href="#contactos">Contactos</a>
         </nav>
+        <div class="disponibilidade">
+            <span class="pont_disponibilidade"></span>
+            <p class="disponibilidade_atual">Disponível para novos projetos e oportunidades</p>
+            <p class="localizacao">Braga, Portugal</p>
+        </div>
     </header>
     <section class="container">
         <section id="about" class="about">
@@ -44,34 +53,56 @@
                 </p>
             </div>
             <div class="atualmente">
+                <h3 class="subtitulo">Atualmente</h3>
                 <div class="atualmente_ponto">
-                    <h3 class="atualmente_subtitulo">Formação:</h3>
-                    <p>Formação em ServiceNow</p>
+                    <p class="atualmente_tipo">Formação:</p>
+                    <p class="atualmente_titulo">Formação em ServiceNow</p>
+                    <p class="atualmente_descricao">
+                        Configuração de instâncias, fluxos de trabalho e automação de
+                        processos de negócio.
+                    </p>
                 </div>
                 <div class="atualmente_ponto">
-                    <h3 class="atualmente_subtitulo">A Aprender:</h3>
-                    <p>Programação em JavaScript</p>
+                    <p class="atualmente_tipo">A Aprender:</p>
+                    <p class="atualmente_titulo">Programacão em JavaScript</p>
+                    <p class="atualmente_descricao">
+                        Lógica algorítmica, manipulação do DOM e desenvolvimento orientado a objetos.
+                    </p>
                 </div>
             </div>
-            <ul class="skills">
-                <li class="linguagem">HTML</li>
-                <li class="linguagem">CSS</li>
-                <li class="linguagem">JavaScript</li>
-                <li class="linguagem">SQL</li>
-                <li class="linguagem">ServiceNow</li>
-            </ul>
+            <div>
+                <h3 class="subtitulo">Competências Técnicas</h3>
+                <ul class="skills">
+                    <li class="linguagem">HTML</li>
+                    <li class="linguagem">CSS</li>
+                    <li class="linguagem">JavaScript</li>
+                    <li class="linguagem">SQL</li>
+                    <li class="linguagem">ServiceNow</li>
+                </ul>
+            </div>
         </section>
         <section id="experiencia" class="experiencia">
             <h2 class="titulo_corpo">Experiência</h2>
             <div class="experiencia_ponto">
                 <p class="intervalo_tempo">2025-2026</p>
                 <p class="titulo_experiencia">Estágio Profissional - Técnico de Qualidade e Segurança Alimentar</p>
-                <p class="descricao_experiencia"></p>
+                <p class="descricao_experiencia">
+                    Acompanhamento dos processos de qualidade e segurança alimentar,
+                    assegurando o cumprimento dos procedimentos internos e a conformidade de matérias-primas e produtos.
+                    Experiência no registo e acompanhamento de não conformidades, gestão de informação de
+                    rastreabilidade e lotes, e utilização do software PHC para registo e consulta de informação
+                    operacional.
+                </p>
             </div>
             <div class="experiencia_ponto">
                 <p class="intervalo_tempo">2022-2025</p>
                 <p class="titulo_experiencia">Mestrado em Bioquímica Aplicada</p>
-                <p class="descricao_experiencia"></p>
+                <p class="descricao_experiencia">
+                    Desenvolvimento de projeto de investigação na área da biotecnologia e resistência antimicrobiana,
+                    com foco no estudo de microrganismos marinhos como fonte de novas moléculas terapêuticas.
+                    Planeamento e execução experimental, análise e gestão de dados, elaboração de documentação técnica e
+                    apresentação de resultados. Média final de 18/20.
+                </p>
             </div>
             <div class="experiencia_ponto">
                 <p class="intervalo_tempo">2019-2022</p>
@@ -83,12 +114,18 @@
             <h2 class="titulo_corpo">Interesses</h2>
             <div class="leitura_atual">
                 <h3 class="subtitulo">Leitura atual</h3>
-                <figure class="capa_livro">
-                    <img src="images/kafka-on-the-shore-1.jpg" alt="Kafka On The Shore">
-                </figure>
-                <div class="percentagem_leitura">
-                    <label for="leitura">Kafka on the Shore</label>
-                    <progress id="leitura" value="65" max="100">65%</progress>
+                <div class="leitura_atual_container">
+                    <figure class="capa_livro">
+                        <img src="images/kafka-on-the-shore-1.jpg" alt="Kafka On The Shore">
+                    </figure>
+                    <div class="leitura_informacao">
+                        <p class="leitura_titulo">Kafka On The Shore</p>
+                        <p class="leitura_autor">Haruki Murakami</p>
+                    </div>
+                    <div class="percentagem_leitura">
+                        <progress id="leitura" value="65" max="100">65%</progress>
+                        <p class="page_count">Página 383 de 574</p>
+                    </div>
                 </div>
             </div>
             <div class="livros_favoritos">
