@@ -7,24 +7,31 @@
 }
 
 :root {
-    --cor-fundo: #FFFFD6;
+    --cor-fundo: #FFFFEB;
     --cor-texto: #0E181B;
     --cor-principial: #C97C5D;
     --cor-destaque: #6B2737;
+    --cor-branco: #FFFFFF;
+
+    --cor-disponivel: rgb(18, 200, 18);
+    --cor-indisponivel: rgb(255, 59, 59);
 
     --espaco-pequeno: 8px;
     --espaco-medio: 16px;
     --espaco-grande: 32px;
     --espaco-seccao: 64px;
 
+    --espaco-top: 30px;
+    --espaco-side: 40px;
+
     --curva-caixa: 12px;
 }
 
 body {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: 
-        "header container" 
+    grid-template-columns: 400px auto;
+    grid-template-areas:
+        "header container"
         "header footer";
 }
 
@@ -38,13 +45,69 @@ header {
     grid-area: header;
     display: flex;
     flex-direction: column;
+    padding: var(--espaco-top) var(--espaco-side);
+}
+
+.subtitulo_header {
+    color: var(--cor-fundo);
+    font-weight: bold;
+}
+
+.titulo_header {
+    color: var(--cor-branco);
+    font-size: 70px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.descricao_header {
+    color: var(--cor-fundo);
+    text-justify: auto;
+}
+
+.navegacao {
+    padding-top: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding-top: var(--espaco-seccao);
-    gap: var(--espaco-seccao);
+    gap: var(--espaco-medio);
+}
+
+.disponibilidade {
+    margin-top: auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3px;
+
+    color: var(--cor-fundo);
+}
+
+.status {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    align-items: center;
+}
+
+.ponto_disponibilidade {    
+    height: 8px;
+    width: 8px;
+    background-color: var(--cor-disponivel);
+    border-radius: 50%;
+}
+
+.disponibilidade_atual,
+.localizacao {
+    font-size: 12px;
 }
 
 .container {
     grid-area: container;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: break-word;
     color: var(--cor-texto);
     background-color: var(--cor-fundo);
 }
@@ -55,16 +118,10 @@ footer {
     background-color: var(--cor-texto);
 }
 
-.navegacao {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--espaco-medio);
-}
+
 
 .botao {
-    width: 80%;
+    width: 100%;
     padding: var(--espaco-medio);
 
     text-decoration: none;
@@ -75,7 +132,7 @@ footer {
     border-color: var(--cor-fundo);
     border-radius: var(--curva-caixa);
 
-    display:flex;
+    display: flex;
     justify-content: center;
 
     font-size: 20px;
