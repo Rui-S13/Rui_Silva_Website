@@ -430,11 +430,20 @@ header {
 }
 
 .favoritos:has(#filmes:checked) .lista_filmes {
+    list-style-type: none;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
 
+    padding: 25px;
+    background-color: var(--cor-branco);
+    border-style: solid;
+    border-color: var(--cor-destaque);
+    border-radius: var(--curva-caixa);
+    border-width: 0.3px;
 }
-
 
 .livro img {
     width: 200px;
@@ -450,6 +459,16 @@ header {
     font-size: 0.75rem;
     font-weight: 400;
     color: #555;
+    text-align: center;
+}
+
+.filme img {
+    width: 200px;
+}
+
+.titulo_filme {
+    font-size: 0.95rem;
+    font-weight: 700;
     text-align: center;
 }
 
