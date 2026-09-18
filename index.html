@@ -20,7 +20,15 @@
         <nav class="navegacao">
             <a class="botao" href="#about">About me</a>
             <a class="botao" href="#experiencia">Experiência</a>
-            <a class="botao" href="#interesses">Interesses</a>
+
+            <details class="submenu_container">
+                <summary class="botao">Interesses</summary>
+                <div class="submenu">
+                    <a class="submenu_opcao" href="#leitura_atual">Leitura atual</a>
+                    <a class="submenu_opcao" href="#favoritos">Favoritos</a>
+                </div>
+            </details>
+
             <a class="botao" href="#contactos">Contactos</a>
         </nav>
 
@@ -159,7 +167,7 @@
 
             <h2 class="titulo_corpo">Interesses</h2>
 
-            <div class="leitura_atual">
+            <div class="leitura_atual" id="leitura_atual">
                 <h3 class="subtitulo">Leitura atual</h3>
                 <div class="leitura_atual_container">
                     <figure class="capa_livro">
@@ -177,7 +185,7 @@
                 </div>
             </div>
 
-            <div class="favoritos">
+            <div class="favoritos" id="favoritos">
                 <h3 class="subtitulo">Favoritos</h3>
 
                 <div class="favoritos_container">
