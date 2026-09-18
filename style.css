@@ -534,6 +534,17 @@ header {
 /*============================FOOTER============================*/
 footer {
     grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
     color: var(--cor-fundo);
     background-color: var(--cor-texto);
+
+    gap: 20px;
+    padding: 20px 0px;
+}
+
+footer p {
+
 }
