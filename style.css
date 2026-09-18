@@ -189,7 +189,7 @@ header {
 /*============================ABOUT ME============================*/
 
 /*---------------TEXTO---------------*/
-.texto_about p{
+.texto_about p {
     margin-bottom: 16px;
 }
 
@@ -413,6 +413,8 @@ header {
     flex-wrap: wrap;
     gap: 25px;
 
+    width: clamp(250px, 100%, 1000px);
+
     padding: 25px;
     background-color: var(--cor-branco);
     border-style: solid;
@@ -436,6 +438,8 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
+
+    width: clamp(250px, 100%, 1000px);
 
     padding: 25px;
     background-color: var(--cor-branco);
@@ -516,7 +520,7 @@ header {
 .contacto:hover {
     background-color: var(--cor-principial);
     color: var(--cor-fundo);
-    fill: var(--cor-fundo);    
+    fill: var(--cor-fundo);
 }
 
 .contacto:active {
