@@ -19,6 +19,7 @@
     --cor-principial: #140751;
     --cor-destaque: #E5B219;
     --cor-branco: #FFFFFF;
+    --cor-botao: rgba(255, 255, 235, 0.1);
 
     --cor-disponivel: rgb(18, 200, 18);
     --cor-indisponivel: rgb(255, 59, 59);
@@ -108,7 +109,7 @@ header {
     color: var(--cor-fundo);
     border: none;
     border-radius: var(--curva-caixa);
-    background-color: rgba(255, 255, 235, 0.1);
+    background-color: var(--cor-botao);
 }
 
 .botao:hover {
@@ -234,7 +235,7 @@ header {
 }
 
 
-/*============================CONTEÚDO============================*/
+/*============================MAIN============================*/
 
 main {
     grid-area: main;
@@ -694,9 +695,6 @@ footer {
         width: 125px;
         padding: 6px 10px;
         font-size: 0.9rem;
-        border: none;
-        border-radius: 6px;
-        background-color: rgba(255, 255, 235, 0.1);
     }
 
     .submenu_container {
