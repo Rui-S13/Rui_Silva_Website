@@ -42,7 +42,7 @@ body {
     display: grid;
     grid-template-columns: 370px auto;
     grid-template-areas:
-        "header container"
+        "header main"
         "header footer";
 }
 
@@ -88,6 +88,7 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    padding-bottom: 30px;
 }
 
 .botao {
@@ -128,13 +129,20 @@ header {
     align-items: center;
 }
 
+.submenu_container::details-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .submenu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
 
-    width: 300px;
+    width: 70%;
     margin-top: 16px;
     margin-bottom: 7px;
     padding: 16px;
@@ -167,6 +175,7 @@ header {
     background-color: var(--cor-destaque);
 }
 
+
 .submenu_container summary {
     position: relative;
 }
@@ -181,6 +190,11 @@ header {
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
     border-top: 13px solid currentColor;
+}
+
+.submenu_container[open] summary {
+    color: var(--cor-principial);
+    background-color: var(--cor-fundo);
 }
 
 .submenu_container[open] summary::after {
@@ -221,22 +235,26 @@ header {
 
 /*============================CONTEÚDO============================*/
 
-.container {
-    grid-area: container;
+main {
+    grid-area: main;
     flex: 1;
     min-width: 0;
-    overflow-wrap: break-word;
-    padding: 20px 17% 64px 17%;
-
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    padding: 50px 17% 64px;
 
+    overflow-wrap: break-word;
     text-align: justify;
     line-height: 1.5;
 
     color: var(--cor-texto);
     background-color: var(--cor-fundo);
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .titulo_corpo {
@@ -381,7 +399,7 @@ header {
         "capa_livro percentagem_leitura";
     align-items: center;
 
-    width: clamp(400px, 100%, 1000px);
+    width: min(100%, 1000px);
 
     padding: 15px;
     background-color: var(--cor-branco);
@@ -489,7 +507,7 @@ header {
     flex-wrap: wrap;
     gap: 25px;
 
-    width: clamp(250px, 100%, 1000px);
+    width: 100%;
 
     padding: 25px;
     background-color: var(--cor-branco);
@@ -515,7 +533,7 @@ header {
     flex-wrap: wrap;
     gap: 25px;
 
-    width: clamp(250px, 100%, 1000px);
+    width: 100%;
 
     padding: 25px;
     background-color: var(--cor-branco);
@@ -523,10 +541,6 @@ header {
     border-color: var(--cor-destaque);
     border-radius: var(--curva-caixa);
     border-width: 0.3px;
-}
-
-.livro img {
-    width: 200px;
 }
 
 .titulo_livro {
@@ -542,22 +556,33 @@ header {
     text-align: center;
 }
 
-.filme img {
-    width: 200px;
-}
-
 .titulo_filme {
     font-size: 0.95rem;
     font-weight: 700;
     text-align: center;
 }
 
+.livro figure, .filme figure{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.capa {
+    width: 200px;
+    height: 300px;
+}
+
+.capa img {
+    width: 200px;
+    height: auto;
+    max-height: 300px;
+}
 
 /*============================CONTACTO============================*/
 .contactos_container {
     display: flex;
     flex-direction: column;
-    width: clamp(400px, 100%, 1000px);
     gap: 15px;
 }
 
@@ -570,7 +595,7 @@ header {
     column-gap: 15px;
 
     padding: 15px;
-    height: 70px;
+    min-height: 70px;
     background-color: var(--cor-branco);
     border: solid var(--cor-destaque) 0.3px;
     border-radius: var(--curva-caixa);
@@ -585,6 +610,7 @@ header {
 
 .contacto_tipo {
     grid-area: tipo;
+    font-weight: bold;
 }
 
 .contacto_informacao {
@@ -608,45 +634,7 @@ header {
 
 /*============================BOTÃO TOPO PÁGINA============================*/
 .seta_container {
-    position: sticky;
-    top: calc(100vh - 80px);
-
-    height: 50px;
-    margin-bottom: -50px;
-
-    display: flex;
-    justify-content: flex-end;
-
-    z-index: 10;
-
-    pointer-events: none;
-}
-
-.seta_topo {
-    width: 50px;
-    height: 50px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--cor-principial);
-    opacity: 0.75;
-    color: var(--cor-branco);
-
-    border-radius: 50%;
-    text-decoration: none;
-
-    pointer-events: auto;
-}
-
-.seta_topo svg {
-    width: 24px;
-    height: 24px;
-}
-
-.seta_topo:hover {
-    opacity: 1;
+    display: none;
 }
 
 
@@ -661,5 +649,155 @@ footer {
     background-color: var(--cor-texto);
 
     gap: 20px;
-    padding: 20px 0px;
+    padding: 20px 20px;
+}
+
+
+/*============================RESPONSIVIDADE============================*/
+
+@media (max-width: 976px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        position: static;
+        height: auto;
+    }
+
+    main {
+        padding: 20px 10%;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .titulo_header {
+        font-size: 50px;
+    }
+
+    .navegacao {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        gap: 5px;
+    }
+
+    .botao {
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+    .submenu {
+        margin-top: 10px;
+        margin-bottom: 7px;
+        padding: 5px;
+        gap: 5px;
+    }
+
+    .submenu_opcao {
+        padding: 0px;
+        font-size: 0.9rem;
+    }
+
+    .leitura_atual_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .capa_livro {
+        text-align: center;
+    }
+
+    .capa_livro img {
+        width: min(200px, 100%);
+        height: auto;
+    }
+
+    .leitura_informacao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .percentagem_leitura {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .livro {
+        text-align: center;
+    }
+
+    .livro img {
+        width: min(200px, 100%);
+    }
+
+    .filme {
+        text-align: center;
+    }
+
+    .filme img {
+        width: min(200px, 100%);
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .contacto_icon {
+        height: 50px;
+    }
+
+    /*============================BOTÃO TOPO PÁGINA============================*/
+
+    .seta_container {
+        position: sticky;
+        top: calc(100vh - 80px);
+
+        display: flex;
+        justify-content: flex-end;
+
+        height: 50px;
+        margin-top: -50px;
+        z-index: 10;
+
+        pointer-events: none;
+    }
+
+    .seta_topo {
+        width: 50px;
+        height: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: var(--cor-principial);
+        opacity: 0.25;
+        color: var(--cor-branco);
+
+        border-radius: 50%;
+        text-decoration: none;
+
+        pointer-events: auto;
+    }
+
+    .seta_topo svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .seta_topo:hover {
+        opacity: 1;
+    }
 }
