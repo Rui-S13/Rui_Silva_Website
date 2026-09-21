@@ -543,10 +543,6 @@ main {
     border-width: 0.3px;
 }
 
-.livro img {
-    width: 200px;
-}
-
 .titulo_livro {
     font-size: 0.95rem;
     font-weight: 700;
@@ -560,16 +556,28 @@ main {
     text-align: center;
 }
 
-.filme img {
-    width: 200px;
-}
-
 .titulo_filme {
     font-size: 0.95rem;
     font-weight: 700;
     text-align: center;
 }
 
+.livro figure, .filme figure{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.capa {
+    width: 200px;
+    height: 300px;
+}
+
+.capa img {
+    width: 200px;
+    height: auto;
+    max-height: 300px;
+}
 
 /*============================CONTACTO============================*/
 .contactos_container {
