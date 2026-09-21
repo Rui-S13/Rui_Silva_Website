@@ -106,9 +106,9 @@ header {
     font-size: 1.3rem;
 
     color: var(--cor-fundo);
-    border-style: solid;
-    border-color: var(--cor-fundo);
+    border: none;
     border-radius: var(--curva-caixa);
+    background-color: rgba(255, 255, 235, 0.1);
 }
 
 .botao:hover {
@@ -147,9 +147,9 @@ header {
     margin-bottom: 7px;
     padding: 16px;
 
-    border-style: solid;
-    border-color: var(--cor-fundo);
+    border: none;
     border-radius: var(--curva-caixa);
+    background-color: rgba(255, 255, 235, 0.1);
 }
 
 .submenu_opcao {
@@ -157,6 +157,7 @@ header {
     line-height: 25px;
     display: flex;
     justify-content: center;
+    text-align: center;
     text-decoration: none;
     color: var(--cor-fundo);
     text-decoration: none;
@@ -562,7 +563,8 @@ main {
     text-align: center;
 }
 
-.livro figure, .filme figure{
+.livro figure,
+.filme figure {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -679,26 +681,42 @@ footer {
     }
 
     .navegacao {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5px;
         padding-top: 20px;
         padding-bottom: 20px;
-        gap: 5px;
     }
 
     .botao {
-        padding: 5px;
-        font-size: 1rem;
+        width: 125px;
+        padding: 6px 10px;
+        font-size: 0.9rem;
+        border: none;
+        border-radius: 6px;
+        background-color: rgba(255, 255, 235, 0.1);
+    }
+
+    .submenu_container {
+        width: auto;
+    }
+
+    .submenu_container summary::after {
+        right: 12px;
     }
 
     .submenu {
-        margin-top: 10px;
-        margin-bottom: 7px;
-        padding: 5px;
+        margin-top: 8px;
+        margin-bottom: 5px;
+        padding: 8px 12px;
         gap: 5px;
     }
 
     .submenu_opcao {
-        padding: 0px;
-        font-size: 0.9rem;
+        padding: 3px 5px;
+        font-size: 1rem;
     }
 
     .leitura_atual_container {
