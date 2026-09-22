@@ -90,7 +90,6 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 13px;
-    padding-bottom: 30px;
 }
 
 .botao {
@@ -204,9 +203,20 @@ header {
     transform: translateY(-50%) rotate(180deg);
 }
 
+
+/*---------------DOWNLOAD CV---------------*/
+
+.download_cv {
+    width: 100%;
+    align-self: center;
+    margin-top: auto;
+}
+
+
 /*---------------DISPONIBILIDADE---------------*/
 .disponibilidade {
     margin-top: auto;
+    padding-top: 15px;
 
     display: flex;
     flex-direction: column;
@@ -422,7 +432,7 @@ main {
     background-color: var(--cor-principial);
     border-radius: var(--curva-caixa) var(--curva-caixa) 0 0;
 
-    padding:16px;
+    padding: 16px;
     text-align: center;
 
     color: var(--cor-branco);
@@ -720,7 +730,6 @@ main {
     background-color: var(--cor-destaque);
     color: var(--cor-principial);
     fill: var(--cor-principial);
-    padding: 20px;
 }
 
 
@@ -806,6 +815,10 @@ footer {
         font-size: 0.9rem;
     }
 
+    .download_cv {
+        width: 100%;
+    }
+
     .leitura_atual_container {
         display: flex;
         flex-direction: column;
@@ -856,11 +869,13 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        justify-content: center;
+        gap: 5px;
+        min-height: 100px;
     }
 
     .contacto_icon {
-        height: 50px;
+        height: 40px;
     }
 
     /*============================BOTÃO TOPO PÁGINA============================*/
