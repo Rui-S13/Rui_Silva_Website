@@ -19,7 +19,8 @@
     --cor-principial: #140751;
     --cor-destaque: #E5B219;
     --cor-branco: #FFFFFF;
-    --cor-botao: rgba(255, 255, 235, 0.1);
+    --cor-botao: #291E60;
+    --cor-cinza: #555;
 
     --cor-disponivel: rgb(18, 200, 18);
     --cor-indisponivel: rgb(255, 59, 59);
@@ -83,12 +84,12 @@ header {
 
 /*---------------NAVEGAÇÃO---------------*/
 .navegacao {
-    padding-top: 70px;
+    padding-top: 40px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 13px;
     padding-bottom: 30px;
 }
 
@@ -100,7 +101,7 @@ header {
     justify-content: center;
 
     width: 100%;
-    padding: 16px;
+    padding: 10px;
 
     text-decoration: none;
     font-weight: 600;
@@ -380,12 +381,101 @@ main {
     top: 5px;
 }
 
+.titulo_experiencia {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .intervalo_tempo {
     font-size: 0.9rem;
 }
 
 .descricao_experiencia {
     font-size: 0.8rem;
+}
+
+
+/*============================PROJETOS============================*/
+
+.lista_projetos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.projeto {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    gap: 15px;
+
+    min-height: 250px;
+    width: 400px;
+
+    background-color: var(--cor-branco);
+    border: solid var(--cor-principial) 0.3px;
+    border-radius: var(--curva-caixa);
+}
+
+.projeto_titulo {
+    background-color: var(--cor-principial);
+    border-radius: var(--curva-caixa) var(--curva-caixa) 0 0;
+
+    padding:16px;
+    text-align: center;
+
+    color: var(--cor-branco);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.projeto_descricao {
+    padding: 0px 20px;
+}
+
+.projeto_fundo {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.projeto_tecnologias {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.projeto_tecnologias li {
+    background-color: var(--cor-principial);
+    color: var(--cor-branco);
+    border-color: var(--cor-principial);
+}
+
+
+.projeto_link {
+    text-align: center;
+    padding: 10px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    background-color: lightgray;
+    border-radius: 0 0 var(--curva-caixa) var(--curva-caixa);
+
+    color: var(--cor-principial);
+    font-weight: bold;
+}
+
+.projeto_link:hover {
+    background-color: var(--cor-botao);
+    color: var(--cor-branco)
+}
+
+.projeto_link:active {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
 }
 
 
@@ -554,7 +644,7 @@ main {
 .autor_livro {
     font-size: 0.75rem;
     font-weight: 400;
-    color: #555;
+    color: var(--cor-cinza);
     text-align: center;
 }
 
@@ -714,7 +804,7 @@ footer {
 
     .submenu_opcao {
         padding: 3px 5px;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .leitura_atual_container {
