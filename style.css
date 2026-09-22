@@ -92,6 +92,10 @@ header {
     gap: 13px;
 }
 
+.navegacao_mobile {
+    display: none
+}
+
 .botao {
     all: unset;
     cursor: pointer;
@@ -150,7 +154,7 @@ header {
 
     border: none;
     border-radius: var(--curva-caixa);
-    background-color: rgba(255, 255, 235, 0.1);
+    background-color: var(--cor-botao);
 }
 
 .submenu_opcao {
@@ -176,7 +180,6 @@ header {
     color: var(--cor-fundo);
     background-color: var(--cor-destaque);
 }
-
 
 .submenu_container summary {
     position: relative;
@@ -787,27 +790,82 @@ footer {
     }
 
     .navegacao {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 5px;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        display: none
     }
 
+    .navegacao_mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 20px 0px 10px 0px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .menu svg {
+        position: absolute;
+        right: 20px;
+
+        width: 20px;
+        height: 20px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+    }
+
+    .menu_mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu_mobile::details-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .submenu_mobile {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 80%;
+        gap: 10px;
+    }
+
+    .menu_mobile[open] .menu {
+        color: var(--cor-principial);
+        background-color: var(--cor-fundo);
+    }
+
+
+
+
     .botao {
-        width: 125px;
+        width: 100%;
         padding: 6px 10px;
         font-size: 0.9rem;
     }
 
     .submenu_container {
-        width: auto;
+        width: 100%;
     }
 
     .submenu_container summary::after {
-        right: 12px;
+        right: 20px;
     }
 
     .submenu {
