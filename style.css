@@ -418,30 +418,37 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1 1 300px;
-    gap: 15px;
 
     min-height: 250px;
     width: 400px;
 
     background-color: var(--cor-branco);
-    border: solid var(--cor-principial) 0.3px;
+    border: solid var(--cor-destaque) 0.3px;
     border-radius: var(--curva-caixa);
 }
 
 .projeto_titulo {
-    background-color: var(--cor-principial);
-    border-radius: var(--curva-caixa) var(--curva-caixa) 0 0;
-
     padding: 16px;
     text-align: center;
 
-    color: var(--cor-branco);
     font-size: 25px;
     font-weight: bold;
 }
 
+.projeto_estado {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-weight: bold;
+    font-size: 14px;
+
+    border: solid var(--cor-principial) 0.3px;
+    padding: 7px;
+}
+
 .projeto_descricao {
-    padding: 0px 20px;
+    padding: 20px 20px;
 }
 
 .projeto_fundo {
@@ -451,16 +458,16 @@ main {
 }
 
 .projeto_tecnologias {
-    padding: 15px 20px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .projeto_tecnologias li {
-    background-color: var(--cor-principial);
-    color: var(--cor-branco);
-    border-color: var(--cor-principial);
+    background-color: var(--cor-destaque);
+    color: var(--cor-principial);
 }
 
 .projeto_link {
