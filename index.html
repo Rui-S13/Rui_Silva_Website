@@ -33,7 +33,34 @@
             <a class="botao" href="#contactos">Contactos</a>
         </nav>
 
-            <a class="botao download_cv" href="" download>Descarregar CV</a>
+        <nav class="navegacao_mobile">
+            <details class="menu_mobile">
+                <summary class="botao menu">
+                    Menu
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </summary>
+
+                <div class="submenu_mobile">
+                    <a class="botao" href="#about">About me</a>
+                    <a class="botao" href="#experiencia">Experiência</a>
+                    <a class="botao" href="#projetos">Projetos</a>
+
+                    <details class="submenu_container">
+                        <summary class="botao">Interesses</summary>
+                        <div class="submenu">
+                            <a class="submenu_opcao" href="#leitura_atual">Leitura atual</a>
+                            <a class="submenu_opcao" href="#favoritos">Favoritos</a>
+                        </div>
+                    </details>
+
+                    <a class="botao" href="#contactos">Contactos</a>
+                </div>
+            </details>
+        </nav>
+
+        <a class="botao download_cv" href="" download>Descarregar CV</a>
 
 
         <div class="disponibilidade">
@@ -180,6 +207,7 @@
                 <div class="lista_projetos">
                     <article class="projeto">
                         <h3 class="projeto_titulo">VoltGo</h3>
+                        <p class="projeto_estado">Terminado</p>
 
                         <p class="projeto_descricao">
                             Sistema de gestão de postos de carregamento
@@ -199,6 +227,7 @@
 
                     <article class="projeto">
                         <h3 class="projeto_titulo">Website Pessoal</h3>
+                        <span class="projeto_estado">Em curso</span>
 
                         <p class="projeto_descricao">
                             Website pessoal desenvolvido como projeto de
