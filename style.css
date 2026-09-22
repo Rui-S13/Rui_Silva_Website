@@ -25,6 +25,9 @@
     --cor-disponivel: rgb(18, 200, 18);
     --cor-indisponivel: rgb(255, 59, 59);
 
+    --terminado: #2E7D32;
+    --em_curso: #1976D2;
+
     --espaco-top: 30px;
     --espaco-side: 40px;
 
@@ -422,46 +425,62 @@ main {
     flex-direction: column;
     flex: 1 1 300px;
 
-    min-height: 250px;
+    min-height: 375px;
     width: 400px;
+    overflow: hidden;
 
     background-color: var(--cor-branco);
     border: solid var(--cor-destaque) 0.3px;
     border-radius: var(--curva-caixa);
 }
 
-.projeto_titulo {
-    padding: 16px;
-    text-align: center;
-
-    font-size: 25px;
-    font-weight: bold;
-}
-
 .projeto_estado {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-self: flex-start;
+    text-align: center;
+    
+    width: fit-content;
+    padding: 7px 20px;
 
     font-weight: bold;
     font-size: 14px;
 
-    border: solid var(--cor-principial) 0.3px;
-    padding: 7px;
+    border-radius: 0 0 var(--curva-caixa) 0;
+
+    color: var(--cor-branco);
+}
+
+.projeto_titulo {
+    padding: 20px 16px 10px;
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.terminado {
+    border-color: var(--terminado);
+    background-color: var(--terminado);
+}
+
+.em_curso {
+    border-color: var(--em_curso);
+    background-color: var(--em_curso);
 }
 
 .projeto_descricao {
-    padding: 20px 20px;
+    padding: 20px 25px;
+    line-height: 1.5;
 }
 
 .projeto_fundo {
     display: flex;
     flex-direction: column;
     margin-top: auto;
+    gap: 10px;
 }
 
 .projeto_tecnologias {
-    padding: 10px 20px;
+    padding: 0px 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -481,7 +500,6 @@ main {
     text-decoration: none;
 
     background-color: lightgray;
-    border-radius: 0 0 var(--curva-caixa) var(--curva-caixa);
 
     color: var(--cor-principial);
     font-weight: bold;
