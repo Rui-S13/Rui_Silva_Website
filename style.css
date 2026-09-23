@@ -449,14 +449,6 @@ main {
     color: var(--cor-branco);
 }
 
-.projeto_titulo {
-    padding: 20px 16px 10px;
-    text-align: center;
-
-    font-size: 30px;
-    font-weight: bold;
-}
-
 .terminado {
     border-color: var(--terminado);
     background-color: var(--terminado);
@@ -467,9 +459,21 @@ main {
     background-color: var(--em_curso);
 }
 
+.projeto_titulo {
+    padding: 20px;
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .projeto_descricao {
-    padding: 20px 25px;
+    padding: 0px 25px;
     line-height: 1.5;
+}
+
+.projeto_descricao p {
+    margin-bottom: 10px;
 }
 
 .projeto_fundo {
