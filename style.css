@@ -438,7 +438,7 @@ main {
 .projeto_estado {
     align-self: flex-start;
     text-align: center;
-    
+
     width: fit-content;
     padding: 7px 20px;
 
@@ -765,6 +765,42 @@ main {
     fill: var(--cor-principial);
 }
 
+/*---------------FAVORITOS---------------*/
+.comentario_container {
+    display: flex;
+    flex-direction: column;
+}
+
+#comentario {
+    width: 80%;
+    min-height: 200px;
+    padding: 20px;
+    resize: vertical;
+    overflow: hidden;
+    align-self: center;
+    border-radius: var(--curva-caixa);
+    border: solid var(--cor-destaque) 0.3px;
+    background-color: var(--cor-branco);
+    margin-bottom: 10px;
+}
+
+.submit_comentario {
+    width: 80%;
+    align-self: center;
+    border-radius: var(--curva-caixa);
+    height: 30px;
+    font-size: 1.1rem;
+
+    border: solid lightgray 0.3px;
+    background-color: lightgrey;
+    color: var(--cor-principial)
+}
+
+.submit_comentario:hover {
+    background-color: var(--cor-principial);
+    color: var(--cor-fundo);
+    cursor: pointer;
+}
 
 /*============================BOTÃO TOPO PÁGINA============================*/
 .seta_container {
@@ -964,6 +1000,14 @@ footer {
 
     .contacto_icon {
         height: 40px;
+    }
+
+    #comentario {
+        width: 100%;
+    }
+
+    .submit_comentario {
+        width: 100%;
     }
 
     /*============================BOTÃO TOPO PÁGINA============================*/
