@@ -300,7 +300,7 @@ main {
 
 .subtitulo {
     margin-bottom: 10px;
-    
+
     color: var(--cor-principial);
     font-size: 1.1rem;
     font-weight: bold;
@@ -385,30 +385,34 @@ main {
     flex-direction: column;
     gap: 50px;
 
-    border-left: solid var(--cor-principial) 2px;
     padding-left: 30px;
+
+    border-left: solid var(--cor-principial) 2px;
 }
 
-.experiencia_ponto {
-    position: relative;
+.experiencia_item {
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    position: relative;
 }
 
 .marcador {
-    width: 15px;
-    height: 15px;
-    background-color: var(--cor-destaque);
-    border-radius: 50%;
-
     position: absolute;
     left: -38px;
     top: 5px;
+
+    width: 15px;
+    height: 15px;
+
+    background-color: var(--cor-destaque);
+
+    border-radius: 50%;
 }
 
-.titulo_experiencia {
-    font-size: 20px;
+.experiencia_titulo {
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -416,8 +420,8 @@ main {
     font-size: 0.9rem;
 }
 
-.descricao_experiencia {
-    font-size: 0.8rem;
+.experiencia_descricao {
+    font-size: 0.9rem;
 }
 
 
