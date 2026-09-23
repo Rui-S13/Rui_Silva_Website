@@ -288,6 +288,7 @@ main {
     color: var(--cor-principial);
     padding: 10px 0px;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .capitulo {
@@ -437,7 +438,7 @@ main {
 .projeto_estado {
     align-self: flex-start;
     text-align: center;
-    
+
     width: fit-content;
     padding: 7px 20px;
 
@@ -447,14 +448,6 @@ main {
     border-radius: 0 0 var(--curva-caixa) 0;
 
     color: var(--cor-branco);
-}
-
-.projeto_titulo {
-    padding: 20px 16px 10px;
-    text-align: center;
-
-    font-size: 30px;
-    font-weight: bold;
 }
 
 .terminado {
@@ -467,9 +460,21 @@ main {
     background-color: var(--em_curso);
 }
 
+.projeto_titulo {
+    padding: 20px;
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .projeto_descricao {
-    padding: 20px 25px;
+    padding: 0px 25px;
     line-height: 1.5;
+}
+
+.projeto_descricao p {
+    margin-bottom: 10px;
 }
 
 .projeto_fundo {
@@ -760,6 +765,42 @@ main {
     fill: var(--cor-principial);
 }
 
+/*---------------FAVORITOS---------------*/
+.comentario_container {
+    display: flex;
+    flex-direction: column;
+}
+
+#comentario {
+    width: 80%;
+    min-height: 200px;
+    padding: 20px;
+    resize: vertical;
+    overflow: hidden;
+    align-self: center;
+    border-radius: var(--curva-caixa);
+    border: solid var(--cor-destaque) 0.3px;
+    background-color: var(--cor-branco);
+    margin-bottom: 10px;
+}
+
+.submit_comentario {
+    width: 80%;
+    align-self: center;
+    border-radius: var(--curva-caixa);
+    height: 30px;
+    font-size: 1.1rem;
+
+    border: solid lightgray 0.3px;
+    background-color: lightgrey;
+    color: var(--cor-principial)
+}
+
+.submit_comentario:hover {
+    background-color: var(--cor-principial);
+    color: var(--cor-fundo);
+    cursor: pointer;
+}
 
 /*============================BOTÃO TOPO PÁGINA============================*/
 .seta_container {
@@ -959,6 +1000,14 @@ footer {
 
     .contacto_icon {
         height: 40px;
+    }
+
+    #comentario {
+        width: 100%;
+    }
+
+    .submit_comentario {
+        width: 100%;
     }
 
     /*============================BOTÃO TOPO PÁGINA============================*/
