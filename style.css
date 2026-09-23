@@ -858,12 +858,8 @@ footer {
         padding: 20px 10%;
     }
 
-    footer {
-        width: 100%;
-    }
-
     .titulo_header {
-        font-size: 50px;
+        font-size: 3rem;
     }
 
     .navegacao_desktop {
@@ -874,7 +870,9 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         width: 100%;
+
         margin: 20px 0px 10px 0px;
     }
 
@@ -901,29 +899,32 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         width: 100%;
     }
 
     .menu_mobile::details-content {
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        width: 100%;
     }
 
     .submenu_mobile {
-        margin-top: 10px;
-        margin-bottom: 5px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 10px;
 
         width: 80%;
-        gap: 10px;
+
+        margin-top: 10px;
+        margin-bottom: 5px;
     }
 
-    .menu_mobile[open] .menu {
+    .menu_mobile[open] .botao_menu {
         color: var(--cor-principial);
         background-color: var(--cor-fundo);
     }
@@ -945,8 +946,6 @@ footer {
     .submenu {
         margin-top: 8px;
         margin-bottom: 5px;
-        padding: 8px 12px;
-        gap: 5px;
     }
 
     .submenu_link {
@@ -963,6 +962,7 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 15px;
+
         width: 100%;
     }
 
@@ -979,7 +979,9 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         width: 100%;
+        
         padding: 0px;
     }
 
@@ -1010,6 +1012,7 @@ footer {
         align-items: center;
         justify-content: center;
         gap: 5px;
+
         min-height: 100px;
     }
 
@@ -1054,8 +1057,8 @@ footer {
         color: var(--cor-branco);
 
         border-radius: 50%;
-        text-decoration: none;
 
+        text-decoration: none;
         pointer-events: auto;
     }
 
