@@ -21,6 +21,7 @@
     --cor-branco: #FFFFFF;
     --cor-botao: #291E60;
     --cor-cinza: #555;
+    --cor-cinza-claro: lightgrey;
 
     --cor-disponivel: rgb(18, 200, 18);
     --cor-indisponivel: rgb(255, 59, 59);
@@ -435,41 +436,41 @@ main {
 }
 
 .projeto {
-    display: flex;
-    flex-direction: column;
     flex: 1 1 300px;
 
+    display: flex;
+    flex-direction: column;
+
     min-height: 375px;
-    width: 400px;
+
+
+    border: solid var(--cor-destaque) 0.3px;
+    border-radius: var(--curva-caixa);
     overflow: hidden;
 
     background-color: var(--cor-branco);
-    border: solid var(--cor-destaque) 0.3px;
-    border-radius: var(--curva-caixa);
 }
 
 .projeto_estado {
     align-self: flex-start;
-    text-align: center;
 
     width: fit-content;
+
     padding: 7px 20px;
 
+    color: var(--cor-branco);
+    text-align: center;
     font-weight: bold;
     font-size: 14px;
 
     border-radius: 0 0 var(--curva-caixa) 0;
-
-    color: var(--cor-branco);
 }
 
 .terminado {
-    border-color: var(--terminado);
     background-color: var(--terminado);
 }
 
 .em_curso {
-    border-color: var(--em_curso);
     background-color: var(--em_curso);
 }
 
@@ -477,32 +478,33 @@ main {
     padding: 20px;
     text-align: center;
 
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 .projeto_descricao {
     padding: 0px 25px;
-    line-height: 1.5;
 }
 
 .projeto_descricao p {
     margin-bottom: 10px;
 }
 
-.projeto_fundo {
+.projeto_rodape {
     display: flex;
     flex-direction: column;
-    margin-top: auto;
     gap: 10px;
+
+    margin-top: auto;
 }
 
 .projeto_tecnologias {
-    padding: 0px 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
+
+    padding: 0px 20px;
 }
 
 .projeto_tecnologias li {
@@ -511,16 +513,16 @@ main {
 }
 
 .projeto_link {
-    text-align: center;
+    cursor: pointer;
+
     padding: 10px;
 
-    cursor: pointer;
-    text-decoration: none;
-
-    background-color: lightgray;
-
+    text-align: center;
     color: var(--cor-principial);
+    text-decoration: none;
     font-weight: bold;
+
+    background-color: var(--cor-cinza-claro);
 }
 
 .projeto_link:hover {
