@@ -544,8 +544,8 @@ main {
     display: grid;
     grid-template-columns: 150px auto;
     grid-template-areas:
-        "capa_livro leitura_informacao"
-        "capa_livro percentagem_leitura";
+        "livro_atual leitura_informacao"
+        "livro_atual percentagem_leitura";
     align-items: center;
 
     width: min(100%, 1000px);
@@ -558,11 +558,11 @@ main {
     border-width: 0.3px;
 }
 
-.capa_livro {
-    grid-area: capa_livro;
+.livro_atual {
+    grid-area: livro_atual;
 }
 
-.capa_livro img {
+.livro_atual img {
     width: 100%;
     height: auto;
 }
@@ -573,9 +573,9 @@ main {
 }
 
 .leitura_titulo {
+    text-align: left;
     font-size: 1.5rem;
     font-weight: bold;
-    text-align: left;
 }
 
 .leitura_autor {
@@ -596,7 +596,7 @@ main {
 }
 
 #leitura::-webkit-progress-bar {
-    background-color: lightgray;
+    background-color: var(--cor-cinza-claro);
     border-radius: var(--curva-caixa);
 }
 
@@ -606,6 +606,8 @@ main {
 }
 
 .page_count {
+    padding: 5px;
+
     font-size: 0.8rem;
 }
 
@@ -632,11 +634,28 @@ main {
     font-weight: bold;
 
     background-color: var(--cor-branco);
+
     padding: 5px 10px;
-    border-style: solid;
-    border-color: var(--cor-destaque);
+
+    border: solid var(--cor-destaque) var(--tamanho-margem);
     border-radius: var(--curva-caixa);
-    border-width: 0.3px;
+}
+
+.lista_favoritos {
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    width: 100%;
+
+    padding: 25px;
+    background-color: var(--cor-branco);
+    border: solid var(--cor-destaque) var(--tamanho-margem);
+    border-radius: var(--curva-caixa);
 }
 
 .lista_filmes {
@@ -649,21 +668,7 @@ main {
 }
 
 .favoritos:has(#livros:checked) .lista_livros {
-    list-style-type: none;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-
-    width: 100%;
-
-    padding: 25px;
-    background-color: var(--cor-branco);
-    border-style: solid;
-    border-color: var(--cor-destaque);
-    border-radius: var(--curva-caixa);
-    border-width: 0.3px;
 }
 
 .favoritos:has(#livros:checked) .lista_filmes {
@@ -675,39 +680,23 @@ main {
 }
 
 .favoritos:has(#filmes:checked) .lista_filmes {
-    list-style-type: none;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-
-    width: 100%;
-
-    padding: 25px;
-    background-color: var(--cor-branco);
-    border-style: solid;
-    border-color: var(--cor-destaque);
-    border-radius: var(--curva-caixa);
-    border-width: 0.3px;
 }
 
-.titulo_livro {
-    font-size: 0.95rem;
-    font-weight: 700;
+.livro,
+.filme {
+    width: 200px;
+}
+
+.titulo_favorito {
+    font-size: 1rem;
+    font-weight: bold;
     text-align: center;
 }
 
 .autor_livro {
     font-size: 0.75rem;
-    font-weight: 400;
     color: var(--cor-cinza);
-    text-align: center;
-}
-
-.titulo_filme {
-    font-size: 0.95rem;
-    font-weight: 700;
     text-align: center;
 }
 
@@ -963,11 +952,11 @@ footer {
         width: 100%;
     }
 
-    .capa_livro {
+    .livro_atual {
         text-align: center;
     }
 
-    .capa_livro img {
+    .livro_atual img {
         width: min(200px, 100%);
         height: auto;
     }
