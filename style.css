@@ -1,3 +1,7 @@
+/* ==================================================
+   CONFIGURAÇÕES GERAIS
+   ================================================== */
+
 @font-face {
     font-family: "Manrope";
     src: url("Fonts/static/PlusJakartaSans-Regular.ttf") format("truetype");
@@ -54,7 +58,9 @@ body {
 }
 
 
-/*============================HEADER============================*/
+/* ==================================================
+   HEADER
+   ================================================== */
 
 header {
     grid-area: header;
@@ -71,7 +77,7 @@ header {
     background-color: var(--cor-principial);
 }
 
-/*---------------TÍTULOS---------------*/
+/*------------------------TÍTULOS------------------------*/
 .header_subtitulo {
     font-weight: bold;
     text-transform: uppercase;
@@ -86,7 +92,7 @@ header {
     text-align: left;
 }
 
-/*---------------NAVEGAÇÃO---------------*/
+/*------------------------NAVEGAÇÃO------------------------*/
 .navegacao_desktop {
     display: flex;
     flex-direction: column;
@@ -216,7 +222,7 @@ header {
 }
 
 
-/*---------------DOWNLOAD CV---------------*/
+/*------------------------DOWNLOAD CV------------------------*/
 
 .download_cv {
     width: 100%;
@@ -225,7 +231,7 @@ header {
 }
 
 
-/*---------------DISPONIBILIDADE---------------*/
+/*------------------------DISPONIBILIDADE------------------------*/
 .disponibilidade {
     display: flex;
     flex-direction: column;
@@ -258,7 +264,9 @@ header {
 }
 
 
-/*============================MAIN============================*/
+/* ==================================================
+   MAIN
+   ================================================== */
 
 main {
     grid-area: main;
@@ -308,14 +316,16 @@ main {
 }
 
 
-/*============================ABOUT ME============================*/
+/* ==================================================
+   ABOUT ME
+   ================================================== */
 
-/*---------------TEXTO---------------*/
+/*------------------------TEXTO------------------------*/
 .texto_about p {
     margin-bottom: 16px;
 }
 
-/*---------------ATUALMENTE---------------*/
+/*------------------------ATUALMENTE------------------------*/
 
 .atualmente_lista {
     display: flex;
@@ -356,7 +366,7 @@ main {
     line-height: 1.1;
 }
 
-/*---------------COMPETÊNCIAS---------------*/
+/*------------------------COMPETÊNCIAS------------------------*/
 
 .skills {
     display: flex;
@@ -379,7 +389,9 @@ main {
 }
 
 
-/*============================EXPERIÊNCIA============================*/
+/* ==================================================
+   EXPERIÊNCIA
+   ================================================== */
 
 .timeline {
     display: flex;
@@ -426,7 +438,9 @@ main {
 }
 
 
-/*============================PROJETOS============================*/
+/* ==================================================
+   PROJETOS
+   ================================================== */
 
 .lista_projetos {
     display: flex;
@@ -536,9 +550,11 @@ main {
 }
 
 
-/*============================INTERESSES============================*/
+/* ==================================================
+   INTERESSES
+   ================================================== */
 
-/*---------------LEITURA ATUAL---------------*/
+/*------------------------LEITURA ATUAL------------------------*/
 
 .leitura_atual_container {
     display: grid;
@@ -548,7 +564,7 @@ main {
         "livro_atual percentagem_leitura";
     align-items: center;
 
-    width: min(100%, 1000px);
+    width: 100%;
 
     padding: 15px;
     background-color: var(--cor-branco);
@@ -611,7 +627,7 @@ main {
     font-size: 0.8rem;
 }
 
-/*---------------FAVORITOS---------------*/
+/*------------------------FAVORITOS------------------------*/
 .favoritos input[type="radio"] {
     display: none;
 }
@@ -685,7 +701,7 @@ main {
 
 .livro,
 .filme {
-    width: 200px;
+    width: min(200px, 100%);
 }
 
 .titulo_favorito {
@@ -708,17 +724,19 @@ main {
 }
 
 .capa {
-    width: 200px;
+    width: 100%;
     height: 300px;
 }
 
 .capa img {
-    width: 200px;
+    width: 100%;
     height: auto;
     max-height: 300px;
 }
 
-/*============================CONTACTO============================*/
+/* ==================================================
+   CONTACTOS
+   ================================================== */
 .contactos_container {
     display: flex;
     flex-direction: column;
@@ -771,7 +789,7 @@ main {
     fill: var(--cor-principial);
 }
 
-/*---------------COMENTÁRIO---------------*/
+/*------------------------COMENTÁRIO------------------------*/
 .comentario_container {
     display: flex;
     flex-direction: column;
@@ -819,13 +837,17 @@ main {
     background-color: var(--cor-destaque);
 }
 
-/*============================BOTÃO TOPO PÁGINA============================*/
+/* ==================================================
+   BOTÃO TOPO PÁGINA
+   ================================================== */
 .seta_container {
     display: none;
 }
 
 
-/*============================FOOTER============================*/
+/* ==================================================
+   FOOTER
+   ================================================== */
 footer {
     grid-area: footer;
     display: flex;
@@ -841,7 +863,9 @@ footer {
 }
 
 
-/*============================RESPONSIVIDADE============================*/
+/* ==================================================
+   RESPONSIVIDADE
+   ================================================== */
 
 @media (max-width: 976px) {
     body {
@@ -981,7 +1005,7 @@ footer {
         align-items: center;
 
         width: 100%;
-        
+
         padding: 0px;
     }
 
@@ -990,20 +1014,13 @@ footer {
         padding: 0px;
     }
 
-    .livro {
-        text-align: center;
-    }
-
-    .livro img {
-        width: min(200px, 100%);
-    }
-
+    .livro,
     .filme {
         text-align: center;
     }
 
-    .filme img {
-        width: min(200px, 100%);
+    .capa {
+        height: auto;
     }
 
     .contacto {
@@ -1028,7 +1045,9 @@ footer {
         width: 100%;
     }
 
-    /*============================BOTÃO TOPO PÁGINA============================*/
+/* ==================================================
+   BOTÃO TOPO PÁGINA
+   ================================================== */
 
     .seta_container {
         position: sticky;
