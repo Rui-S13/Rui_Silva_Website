@@ -288,6 +288,7 @@ main {
     color: var(--cor-principial);
     padding: 10px 0px;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .capitulo {
