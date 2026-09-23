@@ -32,6 +32,7 @@
     --espaco-side: 40px;
 
     --curva-caixa: 12px;
+    --tamanho-margem: 0.3px;
 }
 
 ::selection {
@@ -246,7 +247,7 @@ header {
     width: 8px;
 
     background-color: var(--cor-disponivel);
-    
+
     border-radius: 50%;
 }
 
@@ -260,17 +261,18 @@ header {
 
 main {
     grid-area: main;
-    flex: 1;
-    min-width: 0;
+
     display: flex;
     flex-direction: column;
-    padding: 50px 17% 64px;
 
+    padding: 50px 17%;
+    min-width: 0;
+
+    color: var(--cor-texto);
     overflow-wrap: break-word;
     text-align: justify;
     line-height: 1.5;
 
-    color: var(--cor-texto);
     background-color: var(--cor-fundo);
 }
 
@@ -280,26 +282,30 @@ main {
     gap: 50px;
 }
 
+.capitulo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
 .titulo_corpo {
+    padding-bottom: 5px;
+
     color: var(--cor-principial);
     font-size: 2.5rem;
     font-weight: bold;
-    padding-bottom: 5px;
+
     border-bottom: solid var(--cor-destaque) 2px;
 }
 
 .subtitulo {
+    margin-bottom: 10px;
+    
     color: var(--cor-principial);
-    padding: 10px 0px;
     font-size: 1.1rem;
     font-weight: bold;
 }
 
-.capitulo {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
 /*============================ABOUT ME============================*/
 
@@ -317,25 +323,26 @@ main {
     gap: 15px;
 }
 
-.atualmente_ponto {
+.atualmente_item {
+    flex: 1 1 300px;
+
     display: flex;
     flex-direction: column;
-    flex: 1 1 300px;
     gap: 5px;
 
     padding: 15px;
-    border-style: solid;
-    border-color: var(--cor-destaque);
+
+    border: solid var(--cor-destaque) var(--tamanho-margem);
     border-radius: var(--curva-caixa);
-    border-width: 0.3px;
 
     background-color: var(--cor-branco);
 }
 
 .atualmente_tipo {
-    text-transform: uppercase;
     color: var(--cor-destaque);
-    font-weight: 700px;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: bold;
     font-size: 0.8rem;
 }
 
@@ -358,18 +365,16 @@ main {
     row-gap: 15px;
 }
 
-.linguagem {
+.skill {
     list-style-type: none;
 
-    background-color: var(--cor-branco);
-
     padding: 5px 10px;
-    border-style: solid;
-    border-color: var(--cor-destaque);
+    border: solid var(--cor-destaque) var(--tamanho-margem);
     border-radius: var(--curva-caixa);
-    border-width: 0.3px;
 
     font-weight: bold;
+
+    background-color: var(--cor-branco);
 }
 
 
@@ -852,7 +857,7 @@ footer {
         font-size: 50px;
     }
 
-    .navegacao {
+    .navegacao_desktop {
         display: none
     }
 
