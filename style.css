@@ -829,14 +829,15 @@ main {
 footer {
     grid-area: footer;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    flex-direction: row;
+    gap: 20px;
+
+    padding: 20px 20px;
+
     color: var(--cor-fundo);
     background-color: var(--cor-texto);
-
-    gap: 20px;
-    padding: 20px 20px;
 }
 
 
