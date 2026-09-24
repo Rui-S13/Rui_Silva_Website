@@ -775,6 +775,8 @@ main {
 .contacto_informacao {
     grid-area: informacao;
     justify-self: end;
+    overflow-wrap: anywhere;
+    text-align: right;
 }
 
 .contacto:hover {
